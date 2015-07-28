@@ -63,6 +63,12 @@ handlers:
   upload: dist/elements/(.*)
   secure: always
 
+- url: /components/(.*)
+  static_files: dist/components/\1
+  expiration: "1s"
+  upload: dist/components/(.*)
+  secure: always
+
 - url: /LICENSE
   static_files: dist/LICENSE
   expiration: "7d"
