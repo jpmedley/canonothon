@@ -146,6 +146,13 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+/** Polymer */
+gulp.task('polymer', function() {
+  return gulp.src([
+      './src/**/*.css'])
+    .pipe(gulp.dest('./dist'));
+});
+
 /** Third Party */
 gulp.task('third_party', function() {
   return gulp.src('./src/third_party/**/*.*')
@@ -186,6 +193,7 @@ gulp.task('watch', function() {
   gulp.watch('./src/*.*', ['root']);
   gulp.watch('./src/**/*.html', ['html']);
   gulp.watch('./src/images/**/*.*', ['images']);
+  gulp.watch('./src/**/*.css', ['polymer']);
   gulp.watch('./src/third_party/**/*.*', ['third_party']);
   gulp.watch('./src/scripts/sw.js', ['serviceworker']);
 
