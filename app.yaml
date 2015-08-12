@@ -20,10 +20,10 @@ handlers:
   upload: dist/images/(.*)
   secure: always
 
-- url: /sw.js
-  static_files: dist/scripts/sw.js
+- url: /sw-import.js
+  static_files: dist/sw-import.js
   expiration: "1s"
-  upload: dist/scripts/sw.js
+  upload: /sw-import.js
   secure: always
 
 - url: /favicon.ico
