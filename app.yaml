@@ -26,6 +26,12 @@ handlers:
   upload: /sw-import.js
   secure: always
 
+- url: /(.*\.js)
+  static_files: dist/\1
+  expiration: "1s"
+  upload: dist/(.*\.js)
+  secure: always
+
 - url: /favicon.ico
   static_files: dist/favicon.ico
   expiration: "365d"
