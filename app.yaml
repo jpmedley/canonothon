@@ -27,9 +27,9 @@ handlers:
   secure: always
 
 - url: /(.*\.js)
-  static_files: dist/\1
+  static_files: dist/scripts/\1
   expiration: "1s"
-  upload: dist/(.*\.js)
+  upload: dist/scripts/(.*\.js)
   secure: always
 
 - url: /favicon.ico
