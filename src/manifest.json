@@ -1,6 +1,6 @@
 {
-  "short_name": "Guitar Tuner",
-  "name": "Guitar Tuner",
+  "short_name": "gh Notifier",
+  "name": "GitHub Notifier",
   "start_url": "./?utm_source=web_app_manifest",
   "icons": [
     {

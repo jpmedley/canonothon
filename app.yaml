@@ -1,4 +1,4 @@
-application: google.com:guitar-tuner
+application: google.com:gh-notifier
 version: v20150602
 
 runtime: python27
