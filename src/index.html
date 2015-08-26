@@ -28,17 +28,89 @@ limitations under the License.
 
     <link rel="manifest" href="/manifest.json">
     <style>
-    <!-- {% include "dist/styles/app-core.css" %} -->
-    #subscribe {
-      background: green;
-      color: white;
+    <style is="custom-style">
+    .horizontal-section {
+      min-width: 130px;
     }
+    
+    paper-button {
+      display: block;
+      margin-bottom: 24px;
+    }
+    
+    paper-button.colorful {
+      color: #4285f4;
+    }
+    
+    paper-button[raised].colorful {
+      background: #4285f4;
+      color: #fff;
+    }
+    
+    paper-button[toggles] {
+      transition: background-color 0.3s;
+    }
+    
+    paper-button[toggles][active] {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+    
+    paper-button[toggles][active].colorful {
+      background-color: rgba(66, 133, 244, 0.25);
+    }
+    
+    paper-button[toggles][active][raised].colorful {
+      background-color: rgba(66, 133, 244, 0.75);
+    }
+    
+    paper-button.blue {
+      color: var(--paper-light-blue-500);
+      --paper-button-flat-focus-color: var(--paper-light-blue-50);
+    }
+    paper-button.blue:hover {
+      background: var(--paper-light-blue-50);
+    }
+    paper-button.red {
+      color: var(--paper-red-500);
+      --paper-button-flat-focus-color: var(--paper-red-50);
+    }
+    paper-button.red:hover {
+      background: var(--paper-red-50);
+    }
+    paper-button.green {
+      color: var(--paper-green-500);
+      --paper-button-flat-focus-color: var(--paper-green-50);
+    }
+    paper-button.green:hover {
+      background: var(--paper-green-50);
+    }
+    paper-button.orange {
+      color: var(--paper-orange-500);
+      --paper-button-flat-focus-color: var(--paper-orange-50);
+    }
+    paper-button.orange:hover {
+      background: var(--paper-orange-50);
+    }
+    
+    paper-button.hover:hover {
+      background: #eee;
+    }
+    
+    paper-button.ripple::shadow paper-ripple {
+      color: var(--paper-pink-a200);
+    }
+    
+    paper-button.ripple paper-ripple {
+      color: var(--paper-pink-a200);
+    }
+    
     </style>
     <script src="components/webcomponentsjs/webcomponents.js"></script>
     <link rel="import" href="components/font-roboto/roboto.html">
     <link rel="import" href="components/paper-button/paper-button.html">
     <link rel="import" href="components/paper-item/paper-item.html">
     <link rel="import" href="components/paper-item/paper-item-body.html">
+    <link rel="import" href="components/paper-styles/paper-styles.html">
     <link rel="import" href="components/platinum-sw/platinum-sw-elements.html">
 
   </head>
@@ -46,13 +118,13 @@ limitations under the License.
   <body unresolved>
 
   <paper-item>
-      <paper-item-body two-line>
-          <div>Show your status</div>
-          <div secondary>Your status is visible to everyone</div>
-      </paper-item-body>
+    <paper-item-body two-line>
+      <div>Show your status</div>
+      <div secondary>Your status is visible to everyone</div>
+    </paper-item-body>
   </paper-item>
   
-  <paper-button id="subscribe" toggles>Show Pull Requests</paper-button>
+  <paper-button class="green colorful" raised toggles>Show Pull Requests</paper-button>
 
   <platinum-sw-register auto-register>
     <platinum-sw-import-script href="git-proxy.js"></platinum-sw-import-script>
